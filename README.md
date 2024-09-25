@@ -44,11 +44,10 @@ Dataset ini bertujuan untuk mendapatkan wawasan berharga tentang bagaimana pengu
 | Weekend                            | Nilai Boolean yang menunjukkan apakah kunjungan terjadi pada akhir pekan.                                                            |
 | Month                               | Bulan dalam setahun saat kunjungan terjadi.                                                                                         |
 
-Pada Dataset tersebut berisikan informasi ppengunjung sebanyak 12.330 sampel dengan 17 fitur serta terdapat 0 missing values dan 125 data duplikat, untuk data yang duplikat di hapus, sehingga hanya tersisa 12.205 sampel.
+Pada Dataset tersebut berisikan informasi ppengunjung sebanyak 12.330 sampel dengan 17 fitur serta terdapat 0 missing values dan 125 data duplikat, untuk data yang duplikat di hapus sehingga hanya tersisa 12.205 sampel, kemudian pada dataset ini ada sekitar 17,9% outlier, karena outlier ini cukup besar, jadi tidak dihilangkan.
 
 ### Berikut rangkuman `statistik deskriptif` dari fitur dalam dataset: <br>
 
-### Berikut rangkuman `statistik deskriptif` dari fitur dalam dataset:
 
 | **Fitur**                    | **count**   | **mean**   | **std**    | **min**    | **25%**    | **50%**    | **75%**    | **max**    |
 |------------------------------|-------------|------------|------------|------------|------------|------------|------------|------------|
@@ -66,4 +65,17 @@ Pada Dataset tersebut berisikan informasi ppengunjung sebanyak 12.330 sampel den
 | **Browser**                   | 12205.0000  | 2.3578     | 1.7101     | 1.0000     | 2.0000     | 2.0000     | 2.0000     | 13.0000    |
 | **Region**                    | 12205.0000  | 3.1533     | 2.4023     | 1.0000     | 1.0000     | 3.0000     | 4.0000     | 9.0000     |
 | **TrafficType**               | 12205.0000  | 4.0739     | 4.0167     | 1.0000     | 2.0000     | 2.0000     | 4.0000     | 20.0000    |
+
+#### Interpretasi Statistika Deskriptif Data data 
+- Mayoritas dataset memiliki angka **Mean < Median** , artinya distribusi data cenderung positively skewed.
+- Pada fitur yang menunjukkan **traffic website** seperti 'Administrative', 'Administrative_Duration', 'Informational', 'Informational_Duration', 'ProductRelated', 'ProductRelated_Duration', dan 'PageValues mayoritas memiliki nilai yang menumpuk di angka 0. Sehingga dilakukan Feature Transformation menggunakan PowerTransformer Yeo-Johnson untuk membuat distribusi lebih mendekati normal (Guassian) dan mendukung value data memiliki nilai positif atau negatif.
+
+### Feature Encoding
+Beberapa fitur yang di encoding dengan one hot encoding yaitu 
+- VisitorType dengan other dianggap sebagai returning visitor (modus). Jadi Returning Visitor: 1 dan New Visitor: 0.
+- Revenue, dengan True: 1 dan False: 0.
+- Weekend, dengan True: 1 dan False: 0.
+
+Kemudian Fitur Month, disini akan dilakukan label encoding berdasarkan indeks terbanyak.
+
 
