@@ -113,18 +113,36 @@ Beberapa fitur yang di encoding dengan one hot encoding yaitu
 - Revenue, dengan True: 1 dan False: 0.
 - Weekend, dengan True: 1 dan False: 0.
 
+Kemudian Fitur Month, disini akan dilakukan label encoding berdasarkan indeks terbanyak.
+| Bulan | Angka |
+|-------|-------|
+| May   | 1     |
+| Nov   | 2     |
+| Mar   | 3     |
+| Dec   | 4     |
+| Oct   | 5     |
+| Sep   | 6     |
+| Aug   | 7     |
+| Jul   | 8     |
+| June  | 9     |
+| Feb   | 10    |
+
+Berikut tampilan data sample setelah fitur tersebut di encoding:
+
+| Administrative | Administrative_Duration | Informational | Informational_Duration | ProductRelated | ProductRelated_Duration | BounceRates | ExitRates | PageValues | SpecialDay | Month | OperatingSystems | Browser | Region | TrafficType | VisitorType | Weekend | Revenue |
+|----------------|--------------------------|---------------|------------------------|----------------|-------------------------|-------------|-----------|------------|------------|-------|-------------------|---------|--------|-------------|-------------|---------|---------|
+| -0.998474      | -1.005468                | -0.523851      | -0.494799              | 0.309362       | 0.323600                | -0.802948    | -0.241701 | 1.954765   | -0.33763   | 2     | 2                 | 2       | 3      | 11          | 1           | 0       | 1       |
+| 0.834177       | 0.691681                 | -0.523851      | -0.494799              | 0.992655       | 1.947720                | -0.415908    | -1.004383 | 1.974870   | -0.33763   | 2     | 2                 | 6       | 1      | 3           | 1           | 0       | 1       |
+| -0.998474      | -1.005468                | -0.523851      | -0.494799              | -1.007465      | -1.321258               | 2.209050     | 1.941751  | -0.532801  | -0.33763   | 3     | 3                 | 2       | 3      | 1           | 1           | 0       | 0       |
+| -0.998474      | -1.005468                | 1.807721       | 2.033464               | 2.732505       | 2.394185                | -0.610252    | -1.230481 | 1.898881   | -0.33763   | 2     | 2                 | 2       | 1      | 2           | 1           | 0       | 1       |
+| 1.171179       | 1.290641                 | -0.523851      | -0.494799              | -0.316462      | 0.706921                | -0.395957    | -0.081143 | 1.973952   | -0.33763   | 4     | 2                 | 2       | 1      | 8           | 1           | 0       | 0       |
+
+
 ### Data Transformation
 Berdasarkan stastika deskriptif data tadi banyak value dengan nilai 0, jadi Transformasi feature tidak menggunakan log karena data memiliki banyak value dengan nilai 0. PowerTransformer Yeo-Johnson dipilih untuk membuat distribusi lebih mendekati normal (Guassian) dan mendukung value data memiliki nilai positif atau negatif.
 
 ![Distribusi setelah dilakukan transformasi](https://github.com/user-attachments/assets/4f8dd2df-d776-468f-95ea-78665055cf38)
 
-### Feature Encoding
-Beberapa fitur yang di encoding dengan one hot encoding yaitu 
-- VisitorType dengan other dianggap sebagai returning visitor (modus). Jadi Returning Visitor: 1 dan New Visitor: 0.
-- Revenue, dengan True: 1 dan False: 0.
-- Weekend, dengan True: 1 dan False: 0.
-
-Kemudian Fitur Month, disini akan dilakukan label encoding berdasarkan indeks terbanyak.
 
 ## Analisis Univariat dan Visualisasi Data
 ### Analisis Univariat Visitor Type dengan Revenue
