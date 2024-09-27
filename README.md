@@ -16,9 +16,9 @@ Berikut beberapa pernyataan masalah yang akan di selesaikan berdasarkan pemapara
 - Mengetahui faktor yang mempengaruhi revenue dari pengunjung e-commerce.
 - Mampu membuat model yang memiliki akurasi serta nilai ROC AUC yang tinggi untuk mengklasifikasikan revenue dari pengunjung e-commerce
 
-    ### Solution statements
-    - Melakukan proses *Exploratory Data Analysis* untuk mengetahui fitur yang paling mempengaruhi revenue dar pengunjung e-commerce.
-    - Menggunakan model *Machine Learning* untuk memprediksi revenue dari pengunjung e-commerce, menggunakan Deep Learning yaitu Artificial Neural Network.
+### Solution statements
+- Melakukan proses *Exploratory Data Analysis* untuk mengetahui fitur yang paling mempengaruhi revenue dar pengunjung e-commerce.
+- Menggunakan model *Machine Learning* untuk memprediksi revenue dari pengunjung e-commerce, menggunakan Deep Learning yaitu Artificial Neural Network.
 ## Data Understanding 
 Dataset yang digunakan yaitu Online Shoppers Purchasing Intention untuk memprediksi pengunjung situs e-commerce dalam melakukan revenue yang tersedia di UCI Machine Learning Repository dari Creative Commons Attribution 4.0 International.
 Dataset ini bertujuan untuk mendapatkan wawasan berharga tentang bagaimana pengunjung e-commerce berinteraksi dengan situs e-commerce dan faktor-faktor yang mempengaruhi keputusan pembelian (revenue) dari pengunjung. Dataset ini terdiri dari 1 file csv, 17 fitur dan 12.330 sampel.
