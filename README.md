@@ -229,7 +229,8 @@ BeberapaModel machine learning yang akan digunakan yaitu algoritma Decision Tree
 - Gradient Boosting Machine (GBM) adalah metode ensemble learning yang menggabungkan beberapa model sederhana untuk meningkatkan performa prediksi. GBM bekerja dengan cara membangun model secara bertahap, di mana setiap model baru memperbaiki kesalahan prediksi model sebelumnya. Pada setiap iterasi, model baru ditambahkan untuk memperbaiki hasil prediksi, sehingga secara bertahap meningkatkan akurasi model secara keseluruhan. Pendekatan GBM bersifat "greedy" karena terus menyesuaikan prediksi hingga mencapai performa optimal. [Medium](https://medium.com/@ichlasulamal12/gradient-boosting-machine-konsep-implementasi-dan-aplikasi-f33be4f68052#:~:text=Gradient%20Boosting%20Machine%20(GBM)%20merupakan%20salah%20satu%20metode%20dalam%20machine)
 - XGBoost (Extreme Gradient Boosting) adalah algoritma supervised learning yang sangat efektif dan populer untuk tugas klasifikasi dan regresi. XGBoost merupakan implementasi dari teknik gradient boosting yang mengoptimalkan dan mempercepat proses boosting model.
 ### Feature Important
-![feature important](https://github.com/user-attachments/assets/5dcbc46d-80a4-48b3-aa38-0f42863da032)
+![Feature Important](https://github.com/user-attachments/assets/4cc10501-25f8-4f71-8a61-fb2cf3c00d7d)
+
 Setelah menerapkan ke empat model yaitu Decision Tree, Gradient Boosting Machines (GBM), Random Forest dan XgBoost, Terlihat 3 fitur teratas yang paling mempengaruhi revenue dari pelanggan yaitu PageValues, ProductRelated_Duration, dan ExitRates
 
 - PageValues: Fitur ini sangat penting karena mencerminkan nilai rata-rata halaman yang dikunjungi oleh pelanggan. Semakin tinggi nilai ini, semakin besar kemungkinan pelanggan akan melakukan pembelian (revenue). Hal ini karena PageValues menunjukkan kontribusi halaman tertentu terhadap transaksi.
